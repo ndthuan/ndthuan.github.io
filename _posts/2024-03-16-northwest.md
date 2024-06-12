@@ -4,7 +4,7 @@ title: "Tây Bắc's Timeless Landscapes: Highlights Of A Two-Week Journey"
 categories: Photography
 ---
 
-![Thuan's selfie]({{ site.baseurl }}/images/northwest2024/IMG_1357.JPEG)
+![Thuan's selfie]({{ site.baseurl }}/images/northwest2024/IMG_1357.jpeg)
 My two-week solo motorbike adventure through Tây Bắc was an unforgettable experience. The freedom of the open road, the stunning landscapes, and the warmth of the people I met along the way made it a journey I will cherish forever.  If you're seeking adventure and a chance to connect with nature and culture, I highly recommend exploring this enchanting region on two wheels.
 
 ![Hoa Binh, Vietnam]({{ site.baseurl }}/images/northwest2024/RXB00645.jpeg)
