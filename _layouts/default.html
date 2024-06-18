@@ -7,7 +7,11 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css?{{ site.data['hash'] }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <link rel="canonical" href="{% if page.url contains 'http' %}
+    {{ page.url }}
+    {% else %}
+    {{ site.url }}{{ page.url }}
+    {% endif %}" />
 
     <meta name="theme-color" content="#000000">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
