@@ -5,7 +5,7 @@
     {% seo title=false %}
     {% include meta.html %}
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css?{{ site.data['hash'] }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
@@ -26,7 +26,11 @@
       <div class="wrapper-masthead">
         <div class="container">
           <header class="masthead clearfix">
-            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" alt="{{ site.title }}" /></a>
+            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{% if site.avatar contains 'http' %}
+              {{ site.avatar }}
+              {% else %}
+              {{ site.url }}{{ site.avatar }}
+              {% endif %}" alt="{{ site.title }}" /></a>
 
             <div class="site-info">
               <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>

@@ -17,9 +17,19 @@
 {% endif %}
 
 {% if page.image %}
+{% if page.image contains 'http' %}
+<meta property="og:image" content="{{ page.image }}"/>
+<meta property="twitter:image" content="{{ page.image }}"/>
+{% else %}
 <meta property="og:image" content="{{ site.url }}{{ page.image }}"/>
 <meta property="twitter:image" content="{{ site.url }}{{ page.image }}"/>
+{% endif %}
+{% else %}
+{% if site.avatar contains 'http' %}
+<meta property="og:image" content="{{ site.avatar }}"/>
+<meta property="twitter:image" content="{{ site.avatar }}"/>
 {% else %}
 <meta property="og:image" content="{{ site.url }}{{ site.avatar }}"/>
 <meta property="twitter:image" content="{{ site.url }}{{ site.avatar }}"/>
+{% endif %}
 {% endif %}
