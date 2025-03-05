@@ -1,0 +1,18 @@
+services:
+  jekyll:
+    image: ruby:3.1
+    volumes:
+      - .:/srv/jekyll
+    ports:
+      - "4000:4000"
+    command: sh -c "bundle install && jekyll serve --host 0.0.0.0 --watch"
+    working_dir: /srv/jekyll
+    environment:
+      - JEKYLL_ENV=development
+
+networks:
+  default:
+    driver: bridge
+
+volumes:
+  jekyll_data:
