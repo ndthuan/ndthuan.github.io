@@ -26,12 +26,12 @@ footer-links:
   facebook:
   flickr:
   github: ndthuan
-  instagram:
-  linkedin: 
+  instagram: ndthuan.art
+  linkedin:
   pinterest:
-  rss: 
-  twitter: 
-  stackoverflow: 
+  rss:
+  twitter:
+  stackoverflow:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
   playconsole:
@@ -42,7 +42,7 @@ footer-links:
 disqus: ndthuan
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: 
+google_analytics:
 
 # For newer "GA4" analytics, use the following instead of the "UA" entry above
 #google_analytics_ga4: G-GABC1DEFG
@@ -75,7 +75,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
+    css_class: "highlight"
 
 # Set the Sass partials directory, as we're using @imports
 sass:
@@ -90,7 +90,7 @@ plugins:
   - jekyll-toc
   - jekyll-git-hash
 
-include: ['_pages']
+include: ["_pages"]
 
 paginate: 6
 paginate_path: /page:num/

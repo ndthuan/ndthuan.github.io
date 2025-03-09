@@ -1,9 +1,13 @@
 ---
 layout: default
 ---
-
+{% if post %}
+{% assign categories = post.categories %}
+{% else %}
+{% assign categories = page.categories %}
+{% endif %}
 <article class="post detailed">
-  <h1>{{ page.title }}</h1>
+  <h1>{{ page.title }} <span style="color:grey;font-weight:400">#{{categories[0]}}</span></h1>
 
   <div>
     <p class="author_title">{{site.author}}  ·  {{ page.date | date: "%B %e, %Y" }}</p>
@@ -11,18 +15,13 @@ layout: default
     <p class="author_title" datetime="{{ page.last_modified_at | date_to_xmlschema }}">(Updated: {{ page.last_modified_at | date: "%b %-d, %Y" }})</p>
     {% endif %}
     <div class="post-tags">
-      {% if post %}
-        {% assign categories = post.categories %}
-      {% else %}
-        {% assign categories = page.categories %}
-      {% endif %}
-      {% for category in categories %}
+      <!-- {% for category in categories %}
         <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
         {% unless forloop.last %}&nbsp;{% endunless %}
-      {% endfor %}
+      {% endfor %} -->
     </div>
   </div>
-    
+
   <div class="entry">
     {{ content | toc }}
   </div>

@@ -4,7 +4,7 @@ title: When to and When Not to Pass Context to a Golang Function
 date: 2025-03-05
 categories: Software_Engineering
 toc: true
-excerpt: In Go, the `context` package is a powerful tool for managing request-scoped values, cancellation signals, and deadlines. However, like any tool, it's essential to understand when to use it and when to avoid it. Let's break down the best practices for passing context to your Go functions.
+excerpt: In Go, the context package is a powerful tool for managing request-scoped values, cancellation signals, and deadlines. However, like any tool, it's essential to understand when to use it and when to avoid it. Let's break down the best practices for passing context to your Go functions.
 ---
 
 ## When You Should Pass Context
